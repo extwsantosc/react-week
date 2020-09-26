@@ -1,0 +1,12 @@
+.title {
+    font-family: 'vcr_osd_monoregular', serif;
+    font-size: 130px;
+    margin-top: 50px;
+    color: #028bfd;
+}
+
+.container--title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

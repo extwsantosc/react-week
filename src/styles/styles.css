@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'vcr_osd_monoregular';
+    src: url('vcr_osd_mono_1.001-webfont.woff2') format('woff2'),
+    url('vcr_osd_mono_1.001-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #000000;
+}

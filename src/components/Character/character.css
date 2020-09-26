@@ -1,0 +1,25 @@
+.container--character {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+    background-image: radial-gradient(ellipse, #7de1e1 5%, #2f7c7c 30%, #000000 70%);
+}
+
+.container--character-name {
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+    width: 100%;
+}
+
+.character {
+    margin-top: 20px;
+    transform: scale(0.7);
+}
+
+.character-name {
+    font-weight: 300;
+    color: red;
+    font-size: 25px;
+}
