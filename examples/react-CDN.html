@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React by CDN</title>
+</head>
+<body>
+<div id="app"></div>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script>
+  const Title = ({text}) => {
+    return React.createElement('h1', null, text)
+  }
+  const TodoList = ({todos}) => (
+    React.createElement('ul', null, ...todos.map(todo => React.createElement('li', null, todo)))
+  );
+  const TodoContainer = () => {
+    const [todos, setTodos] = React.useState([]);
+    React.useEffect(() => {
+      console.log('todo list actual size: ' + todos.length);
+    }, [todos]);
+
+    const addTodo = () => {
+      const createTodo = (idx) => 'Some todo ' + (idx + 1);
+      setTodos([...todos, createTodo(todos.length)])
+    }
+    return React.createElement(React.Fragment, null,
+      React.createElement('button', {
+        onClick: addTodo,
+      }, 'Add Todo'),
+      React.createElement(TodoList, { todos })
+    )
+  }
+  const App = () => {
+    return React.createElement(
+      React.Fragment, null,
+      React.createElement(Title, {text: 'Todos'}),
+      React.createElement(TodoContainer),
+    );
+  }
+  ReactDOM.render(React.createElement(App), document.getElementById('app'));
+</script>
+</body>
+</html>
