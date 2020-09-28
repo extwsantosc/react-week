@@ -22,11 +22,11 @@
   const TodoContainer = () => {
     const [todos, setTodos] = React.useState([]);
     React.useEffect(() => {
-      console.log('todo list actual size: ' + todos.length);
+      console.log(`todo list actual size: ${todos.length}`);
     }, [todos]);
 
     const addTodo = () => {
-      const createTodo = (idx) => 'Some todo ' + (idx + 1);
+      const createTodo = (idx) => `Some todo ${idx + 1}`;
       setTodos([...todos, createTodo(todos.length)])
     }
     return React.createElement(React.Fragment, null,
@@ -39,7 +39,7 @@
   const App = () => {
     return React.createElement(
       React.Fragment, null,
-      React.createElement(Title, {text: 'Todos'}),
+      React.createElement(Title, { text: 'Todos' }),
       React.createElement(TodoContainer),
     );
   }

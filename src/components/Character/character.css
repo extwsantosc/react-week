@@ -1,8 +1,20 @@
+.container--animation {
+    animation: load-character 2.0s forwards 0.5s;
+    opacity: 0;
+}
+@keyframes load-character {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .container--character {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 400px;
     background-image: radial-gradient(ellipse, #7de1e1 5%, #2f7c7c 30%, #000000 70%);
 }
 
@@ -14,8 +26,10 @@
 }
 
 .character {
+    position:relative;
     margin-top: 20px;
     transform: scale(0.7);
+    transition: 0.1s;
 }
 
 .character-name {

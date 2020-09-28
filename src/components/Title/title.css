@@ -3,10 +3,25 @@
     font-size: 130px;
     margin-top: 50px;
     color: #028bfd;
+    position: absolute;
+    animation: load-title 4.0s forwards;
 }
 
 .container--title {
     display: flex;
     width: 100%;
     justify-content: center;
+}
+
+@keyframes load-title {
+    0% {
+        opacity: 0;
+        margin-top: -5px;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
 }
